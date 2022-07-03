@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1656870493524">
+    <module artifactId="codbex-agoreus-platform-keycloack" groupId="com.codbex.agoreus" version="0.1.0-SNAPSHOT"/>
+    <files>
+        <file path="src/main/webapp/META-INF/context.xml" result="NOOP"/>
+        <file path="src/main/webapp/WEB-INF/web.xml" result="NOOP"/>
+    </files>
+</licensePluginReport>

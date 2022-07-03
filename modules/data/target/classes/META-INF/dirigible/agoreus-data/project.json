@@ -1,0 +1,8 @@
+{
+    "guid": "agoreus-data",
+    "repository": {
+        "type": "git",
+        "branch": "main",
+        "url": "https://github.com/codbex/codbex-agoreus.git"
+    }
+}
