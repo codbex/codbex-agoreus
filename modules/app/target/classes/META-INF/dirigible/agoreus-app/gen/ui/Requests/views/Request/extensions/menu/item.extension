@@ -1,0 +1,5 @@
+{
+	"description": "Request menu",
+	"extensionPoint": "shell-agoreus-app-menu",
+	"module": "agoreus-app/gen/ui/Requests/views/Request/extensions/menu/item.js"
+}

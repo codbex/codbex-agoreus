@@ -1,0 +1,5 @@
+{
+	"description": "Requests perspective",
+	"extensionPoint": "launchpad-Agoreus-perspective",
+	"module": "agoreus-app/gen/ui/Requests/extensions/perspective/perspective.js"
+}

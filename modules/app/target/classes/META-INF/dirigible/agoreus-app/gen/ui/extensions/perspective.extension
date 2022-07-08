@@ -1,0 +1,5 @@
+{
+	"description": "Home perspective",
+	"extensionPoint": "launchpad-Agoreus-perspective",
+	"module": "agoreus-app/gen/ui/extensions/perspective.js"
+}

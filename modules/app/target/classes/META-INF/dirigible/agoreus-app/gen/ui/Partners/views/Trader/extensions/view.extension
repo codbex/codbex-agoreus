@@ -1,0 +1,5 @@
+{
+	"description": "Trader view",
+	"extensionPoint": "launchpad-Agoreus-Partners-view",
+	"module": "agoreus-app/gen/ui/Partners/views/Trader/extensions/view.js"
+}

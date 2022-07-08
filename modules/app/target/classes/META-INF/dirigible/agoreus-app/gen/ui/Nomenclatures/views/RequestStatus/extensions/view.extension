@@ -1,0 +1,5 @@
+{
+	"description": "RequestStatus view",
+	"extensionPoint": "launchpad-Agoreus-Nomenclatures-view",
+	"module": "agoreus-app/gen/ui/Nomenclatures/views/RequestStatus/extensions/view.js"
+}

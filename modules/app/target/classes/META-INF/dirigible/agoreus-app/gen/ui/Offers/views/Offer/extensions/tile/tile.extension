@@ -1,0 +1,5 @@
+{
+	"description": "Offers tiles",
+	"extensionPoint": "launchpad-Agoreus-tiles",
+	"module": "agoreus-app/gen/ui/Offers/views/Offer/extensions/tile/tile.js"
+}

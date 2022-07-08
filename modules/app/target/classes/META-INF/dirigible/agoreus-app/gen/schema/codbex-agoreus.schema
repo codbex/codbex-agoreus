@@ -1,0 +1,824 @@
+{
+    "schema": {
+        "structures": [
+            {
+                "name": "AGOREUS_PARTNER",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PARTNER_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "PARTNER_NAME"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 2000,
+                        "nullable": true,
+                        "name": "PARTNER_ADDRESS"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "PARTNER_CITY"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PARTNER_POSTALCODE"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "PARTNER_EMAIL"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PARTNER_PHONE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PARTNER_COUNTRYID"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_REQUEST",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "REQUEST_ID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_REQUESTTYPEID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_PARTNERID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_NAME"
+                    },
+                    {
+                        "type": "DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_CREATIONDATE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_REQUESTSTATUSID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_PRODUCTID"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_QUANTITY"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_UOMID"
+                    },
+                    {
+                        "type": "CHAR",
+                        "length": 3,
+                        "nullable": true,
+                        "name": "REQUEST_CURRENCYCODE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_PRICE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_TOTAL"
+                    },
+                    {
+                        "type": "DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUEST_DUEDATE"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "REQUEST_LOCATION"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_COUNTRYID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "REQUEST_TRADERID"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_REQUESTSTATUS",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "REQUESTSTATUS_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUESTSTATUS_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_PRODUCT",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PRODUCT_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 120,
+                        "nullable": true,
+                        "name": "PRODUCT_NAME"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 120,
+                        "nullable": true,
+                        "name": "PRODUCT_PROPERTY3"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 127,
+                        "nullable": true,
+                        "name": "PRODUCT_MANUFACTURERCODE"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_COUNTRY",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "COUNTRY_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 255,
+                        "nullable": true,
+                        "name": "COUNTRY_NAME"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COUNTRY_CODE2"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COUNTRY_CODE3"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "COUNTRY_NUMERIC"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_CURRENCY",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "CHAR",
+                        "length": 3,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "CURRENCY_CODE"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 127,
+                        "nullable": true,
+                        "name": "CURRENCY_NAME"
+                    },
+                    {
+                        "type": "CHAR",
+                        "length": 3,
+                        "nullable": true,
+                        "name": "CURRENCY_NUMERIC"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "CURRENCY_ROUNDING"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "CURRENCY_ACTIVE"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_REQUESTTYPE",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "REQUESTTYPE_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "REQUESTTYPE_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_OFFER",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "OFFER_ID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "OFFER_PARTNERID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "OFFER_REQUESTID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "OFFER_NAME"
+                    },
+                    {
+                        "type": "DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFER_CREATIONDATE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFER_QUANTITY"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFER_PRICE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFER_TOTAL"
+                    },
+                    {
+                        "type": "DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFER_VALIDITYDATE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "OFFER_OFFERSTATUSID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "OFFER_TRADERID"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_OFFERSTATUS",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "OFFERSTATUS_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "OFFERSTATUS_NAME"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_INVOICES",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "INVOICES_ID"
+                    },
+                    {
+                        "type": "DATE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICES_DATE"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_OFFERID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_PRODUCTID"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICES_QUANTITY"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_UOMID"
+                    },
+                    {
+                        "type": "CHAR",
+                        "length": 3,
+                        "nullable": true,
+                        "name": "INVOICES_CURRENCYCODE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICES_PRICE"
+                    },
+                    {
+                        "type": "DOUBLE",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "INVOICES_TOTAL"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_BUYERID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_SUPPLIERID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "INVOICES_TRADERID"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_PAYMENT",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "PAYMENT_ID"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PAYMENT_INVOICESID"
+                    },
+                    {
+                        "type": "CHAR",
+                        "length": 3,
+                        "nullable": true,
+                        "name": "PAYMENT_CURRENCYCODE"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "PAYMENT_AMOUNT"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "PAYMENT_TRADERID"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_UOM",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "UOM_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 255,
+                        "nullable": true,
+                        "name": "UOM_NAME"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 20,
+                        "nullable": true,
+                        "name": "UOM_UNIT"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "UOM_DIMENSION"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "UOM_NUMERATOR"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "UOM_DENOMINATOR"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "UOM_ROUNDING"
+                    }
+                ]
+            },
+            {
+                "name": "AGOREUS_TRADER",
+                "type": "TABLE",
+                "columns": [
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "primaryKey": true,
+                        "identity": true,
+                        "nullable": true,
+                        "name": "TRADER_ID"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "TRADER_NAME"
+                    },
+                    {
+                        "type": "VARCHAR",
+                        "length": 200,
+                        "nullable": true,
+                        "name": "TRADER_EMAIL"
+                    },
+                    {
+                        "type": "INTEGER",
+                        "length": 0,
+                        "nullable": true,
+                        "name": "TRADER_PARTNERID"
+                    }
+                ]
+            },
+            {
+                "name": "Partner_Country",
+                "type": "foreignKey",
+                "table": "AGOREUS_PARTNER",
+                "constraintName": "Partner_Country",
+                "columns": "PARTNER_COUNTRYID",
+                "referencedTable": "AGOREUS_COUNTRY",
+                "referencedColumns": "COUNTRY_ID"
+            },
+            {
+                "name": "Request_RequestType",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_RequestType",
+                "columns": "REQUEST_REQUESTTYPEID",
+                "referencedTable": "AGOREUS_REQUESTTYPE",
+                "referencedColumns": "REQUESTTYPE_ID"
+            },
+            {
+                "name": "Request_Partner",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_Partner",
+                "columns": "REQUEST_PARTNERID",
+                "referencedTable": "AGOREUS_PARTNER",
+                "referencedColumns": "PARTNER_ID"
+            },
+            {
+                "name": "Request_RequestStatus",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_RequestStatus",
+                "columns": "REQUEST_REQUESTSTATUSID",
+                "referencedTable": "AGOREUS_REQUESTSTATUS",
+                "referencedColumns": "REQUESTSTATUS_ID"
+            },
+            {
+                "name": "Request_Product",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_Product",
+                "columns": "REQUEST_PRODUCTID",
+                "referencedTable": "AGOREUS_PRODUCT",
+                "referencedColumns": "PRODUCT_ID"
+            },
+            {
+                "name": "Request_UoM",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_UoM",
+                "columns": "REQUEST_UOMID",
+                "referencedTable": "AGOREUS_UOM",
+                "referencedColumns": "UOM_ID"
+            },
+            {
+                "name": "Request_Currency",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_Currency",
+                "columns": "REQUEST_CURRENCYCODE",
+                "referencedTable": "AGOREUS_CURRENCY",
+                "referencedColumns": "CURRENCY_CODE"
+            },
+            {
+                "name": "Request_Country",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_Country",
+                "columns": "REQUEST_COUNTRYID",
+                "referencedTable": "AGOREUS_COUNTRY",
+                "referencedColumns": "COUNTRY_ID"
+            },
+            {
+                "name": "Request_Trader",
+                "type": "foreignKey",
+                "table": "AGOREUS_REQUEST",
+                "constraintName": "Request_Trader",
+                "columns": "REQUEST_TRADERID",
+                "referencedTable": "AGOREUS_TRADER",
+                "referencedColumns": "TRADER_ID"
+            },
+            {
+                "name": "Offer_Partner",
+                "type": "foreignKey",
+                "table": "AGOREUS_OFFER",
+                "constraintName": "Offer_Partner",
+                "columns": "OFFER_PARTNERID",
+                "referencedTable": "AGOREUS_PARTNER",
+                "referencedColumns": "PARTNER_ID"
+            },
+            {
+                "name": "Offer_Request",
+                "type": "foreignKey",
+                "table": "AGOREUS_OFFER",
+                "constraintName": "Offer_Request",
+                "columns": "OFFER_REQUESTID",
+                "referencedTable": "AGOREUS_REQUEST",
+                "referencedColumns": "REQUEST_ID"
+            },
+            {
+                "name": "Offer_OfferStatus",
+                "type": "foreignKey",
+                "table": "AGOREUS_OFFER",
+                "constraintName": "Offer_OfferStatus",
+                "columns": "OFFER_OFFERSTATUSID",
+                "referencedTable": "AGOREUS_OFFERSTATUS",
+                "referencedColumns": "OFFERSTATUS_ID"
+            },
+            {
+                "name": "Offer_Trader",
+                "type": "foreignKey",
+                "table": "AGOREUS_OFFER",
+                "constraintName": "Offer_Trader",
+                "columns": "OFFER_TRADERID",
+                "referencedTable": "AGOREUS_TRADER",
+                "referencedColumns": "TRADER_ID"
+            },
+            {
+                "name": "Invoices_Offer",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Offer",
+                "columns": "INVOICES_OFFERID",
+                "referencedTable": "AGOREUS_OFFER",
+                "referencedColumns": "OFFER_ID"
+            },
+            {
+                "name": "Invoices_Product",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Product",
+                "columns": "INVOICES_PRODUCTID",
+                "referencedTable": "AGOREUS_PRODUCT",
+                "referencedColumns": "PRODUCT_ID"
+            },
+            {
+                "name": "Invoices_UoM",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_UoM",
+                "columns": "INVOICES_UOMID",
+                "referencedTable": "AGOREUS_UOM",
+                "referencedColumns": "UOM_ID"
+            },
+            {
+                "name": "Invoices_Currency",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Currency",
+                "columns": "INVOICES_CURRENCYCODE",
+                "referencedTable": "AGOREUS_CURRENCY",
+                "referencedColumns": "CURRENCY_CODE"
+            },
+            {
+                "name": "Invoices_Partner",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Partner",
+                "columns": "INVOICES_BUYERID",
+                "referencedTable": "AGOREUS_PARTNER",
+                "referencedColumns": "PARTNER_ID"
+            },
+            {
+                "name": "Invoices_Partner",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Partner",
+                "columns": "INVOICES_SUPPLIERID",
+                "referencedTable": "AGOREUS_PARTNER",
+                "referencedColumns": "PARTNER_ID"
+            },
+            {
+                "name": "Invoices_Trader",
+                "type": "foreignKey",
+                "table": "AGOREUS_INVOICES",
+                "constraintName": "Invoices_Trader",
+                "columns": "INVOICES_TRADERID",
+                "referencedTable": "AGOREUS_TRADER",
+                "referencedColumns": "TRADER_ID"
+            },
+            {
+                "name": "Payment_Invoices",
+                "type": "foreignKey",
+                "table": "AGOREUS_PAYMENT",
+                "constraintName": "Payment_Invoices",
+                "columns": "PAYMENT_INVOICESID",
+                "referencedTable": "AGOREUS_INVOICES",
+                "referencedColumns": "INVOICES_ID"
+            },
+            {
+                "name": "Payment_Currency",
+                "type": "foreignKey",
+                "table": "AGOREUS_PAYMENT",
+                "constraintName": "Payment_Currency",
+                "columns": "PAYMENT_CURRENCYCODE",
+                "referencedTable": "AGOREUS_CURRENCY",
+                "referencedColumns": "CURRENCY_CODE"
+            },
+            {
+                "name": "Payment_Trader",
+                "type": "foreignKey",
+                "table": "AGOREUS_PAYMENT",
+                "constraintName": "Payment_Trader",
+                "columns": "PAYMENT_TRADERID",
+                "referencedTable": "AGOREUS_TRADER",
+                "referencedColumns": "TRADER_ID"
+            },
+            {
+                "name": "Trader_Partner",
+                "type": "foreignKey",
+                "table": "AGOREUS_TRADER",
+                "constraintName": "Trader_Partner",
+                "columns": "TRADER_PARTNERID",
+                "referencedTable": "AGOREUS_PARTNER",
+                "referencedColumns": "PARTNER_ID"
+            }
+        ]
+    }
+}

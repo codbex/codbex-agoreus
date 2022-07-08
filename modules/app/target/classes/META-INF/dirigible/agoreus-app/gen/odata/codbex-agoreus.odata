@@ -1,0 +1,933 @@
+{
+    "namespace": "agoreus",
+    "entities": [
+        {
+            "name": "Partner",
+            "alias": "Partner",
+            "table": "AGOREUS_PARTNER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "PARTNER_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "PARTNER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Address",
+                    "column": "PARTNER_ADDRESS",
+                    "nullable": true
+                },
+                {
+                    "name": "City",
+                    "column": "PARTNER_CITY",
+                    "nullable": true
+                },
+                {
+                    "name": "PostalCode",
+                    "column": "PARTNER_POSTALCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Email",
+                    "column": "PARTNER_EMAIL",
+                    "nullable": true
+                },
+                {
+                    "name": "Phone",
+                    "column": "PARTNER_PHONE",
+                    "nullable": true
+                },
+                {
+                    "name": "CountryId",
+                    "column": "PARTNER_COUNTRYID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "PartnerRequest"
+                },
+                {
+                    "name": "Offer",
+                    "association": "PartnerOffer"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "PartnerInvoices"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "PartnerInvoices"
+                },
+                {
+                    "name": "Trader",
+                    "association": "PartnerTrader"
+                }
+            ]
+        },
+        {
+            "name": "Request",
+            "alias": "Request",
+            "table": "AGOREUS_REQUEST",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "REQUEST_ID"
+                },
+                {
+                    "name": "RequestTypeId",
+                    "column": "REQUEST_REQUESTTYPEID",
+                    "nullable": true
+                },
+                {
+                    "name": "PartnerId",
+                    "column": "REQUEST_PARTNERID",
+                    "nullable": true
+                },
+                {
+                    "name": "Name",
+                    "column": "REQUEST_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Date",
+                    "column": "REQUEST_CREATIONDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "RequestStatusId",
+                    "column": "REQUEST_REQUESTSTATUSID",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "REQUEST_PRODUCTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "REQUEST_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "REQUEST_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "REQUEST_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "REQUEST_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "REQUEST_TOTAL",
+                    "nullable": true
+                },
+                {
+                    "name": "DueDate",
+                    "column": "REQUEST_DUEDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "Location",
+                    "column": "REQUEST_LOCATION",
+                    "nullable": true
+                },
+                {
+                    "name": "CountryId",
+                    "column": "REQUEST_COUNTRYID",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "REQUEST_TRADERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Offer",
+                    "association": "RequestOffer"
+                }
+            ]
+        },
+        {
+            "name": "RequestStatus",
+            "alias": "RequestStatus",
+            "table": "AGOREUS_REQUESTSTATUS",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "REQUESTSTATUS_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "REQUESTSTATUS_NAME",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "RequestStatusRequest"
+                }
+            ]
+        },
+        {
+            "name": "Product",
+            "alias": "Product",
+            "table": "AGOREUS_PRODUCT",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "PRODUCT_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "PRODUCT_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Code",
+                    "column": "PRODUCT_PROPERTY3",
+                    "nullable": true
+                },
+                {
+                    "name": "ManufacturerCode",
+                    "column": "PRODUCT_MANUFACTURERCODE",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "ProductRequest"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "ProductInvoices"
+                }
+            ]
+        },
+        {
+            "name": "Country",
+            "alias": "Country",
+            "table": "AGOREUS_COUNTRY",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "COUNTRY_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "COUNTRY_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Code2",
+                    "column": "COUNTRY_CODE2",
+                    "nullable": true
+                },
+                {
+                    "name": "Code3",
+                    "column": "COUNTRY_CODE3",
+                    "nullable": true
+                },
+                {
+                    "name": "Numeric",
+                    "column": "COUNTRY_NUMERIC",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Partner",
+                    "association": "CountryPartner"
+                },
+                {
+                    "name": "Request",
+                    "association": "CountryRequest"
+                }
+            ]
+        },
+        {
+            "name": "Currency",
+            "alias": "Currency",
+            "table": "AGOREUS_CURRENCY",
+            "properties": [
+                {
+                    "name": "Code",
+                    "column": "CURRENCY_CODE"
+                },
+                {
+                    "name": "Name",
+                    "column": "CURRENCY_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Numeric",
+                    "column": "CURRENCY_NUMERIC",
+                    "nullable": true
+                },
+                {
+                    "name": "Rounding",
+                    "column": "CURRENCY_ROUNDING",
+                    "nullable": true
+                },
+                {
+                    "name": "Active",
+                    "column": "CURRENCY_ACTIVE",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "CurrencyRequest"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "CurrencyInvoices"
+                },
+                {
+                    "name": "Payment",
+                    "association": "CurrencyPayment"
+                }
+            ]
+        },
+        {
+            "name": "RequestType",
+            "alias": "RequestType",
+            "table": "AGOREUS_REQUESTTYPE",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "REQUESTTYPE_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "REQUESTTYPE_NAME",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "RequestTypeRequest"
+                }
+            ]
+        },
+        {
+            "name": "Offer",
+            "alias": "Offer",
+            "table": "AGOREUS_OFFER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "OFFER_ID"
+                },
+                {
+                    "name": "PartnerId",
+                    "column": "OFFER_PARTNERID",
+                    "nullable": true
+                },
+                {
+                    "name": "RequestId",
+                    "column": "OFFER_REQUESTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Name",
+                    "column": "OFFER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Date",
+                    "column": "OFFER_CREATIONDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "OFFER_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "OFFER_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "OFFER_TOTAL",
+                    "nullable": true
+                },
+                {
+                    "name": "ValidityDate",
+                    "column": "OFFER_VALIDITYDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "OfferStatusId",
+                    "column": "OFFER_OFFERSTATUSID",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "OFFER_TRADERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Invoices",
+                    "association": "OfferInvoices"
+                }
+            ]
+        },
+        {
+            "name": "OfferStatus",
+            "alias": "OfferStatus",
+            "table": "AGOREUS_OFFERSTATUS",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "OFFERSTATUS_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "OFFERSTATUS_NAME",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Offer",
+                    "association": "OfferStatusOffer"
+                }
+            ]
+        },
+        {
+            "name": "Invoices",
+            "alias": "Invoices",
+            "table": "AGOREUS_INVOICES",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "INVOICES_ID"
+                },
+                {
+                    "name": "Date",
+                    "column": "INVOICES_DATE",
+                    "nullable": true
+                },
+                {
+                    "name": "OfferId",
+                    "column": "INVOICES_OFFERID",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "INVOICES_PRODUCTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "INVOICES_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "INVOICES_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "INVOICES_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "INVOICES_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "INVOICES_TOTAL",
+                    "nullable": true
+                },
+                {
+                    "name": "BuyerId",
+                    "column": "INVOICES_BUYERID",
+                    "nullable": true
+                },
+                {
+                    "name": "SupplierId",
+                    "column": "INVOICES_SUPPLIERID",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "INVOICES_TRADERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Payment",
+                    "association": "InvoicesPayment"
+                }
+            ]
+        },
+        {
+            "name": "Payment",
+            "alias": "Payment",
+            "table": "AGOREUS_PAYMENT",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "PAYMENT_ID"
+                },
+                {
+                    "name": "InvoicesId",
+                    "column": "PAYMENT_INVOICESID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "PAYMENT_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Amount",
+                    "column": "PAYMENT_AMOUNT",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "PAYMENT_TRADERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": []
+        },
+        {
+            "name": "UoM",
+            "alias": "UoM",
+            "table": "AGOREUS_UOM",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "UOM_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "UOM_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Unit",
+                    "column": "UOM_UNIT",
+                    "nullable": true
+                },
+                {
+                    "name": "Dimension",
+                    "column": "UOM_DIMENSION",
+                    "nullable": true
+                },
+                {
+                    "name": "Numerator",
+                    "column": "UOM_NUMERATOR",
+                    "nullable": true
+                },
+                {
+                    "name": "Denominator",
+                    "column": "UOM_DENOMINATOR",
+                    "nullable": true
+                },
+                {
+                    "name": "Rounding",
+                    "column": "UOM_ROUNDING",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "UoMRequest"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "UoMInvoices"
+                }
+            ]
+        },
+        {
+            "name": "Trader",
+            "alias": "Trader",
+            "table": "AGOREUS_TRADER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "TRADER_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "TRADER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Email",
+                    "column": "TRADER_EMAIL",
+                    "nullable": true
+                },
+                {
+                    "name": "PartnerId",
+                    "column": "TRADER_PARTNERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Request",
+                    "association": "TraderRequest"
+                },
+                {
+                    "name": "Offer",
+                    "association": "TraderOffer"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "TraderInvoices"
+                },
+                {
+                    "name": "Payment",
+                    "association": "TraderPayment"
+                }
+            ]
+        }
+    ],
+    "associations": [
+        {
+            "name": "PartnerRequest",
+            "from": {
+                "entity": "Partner",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "PartnerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "PartnerOffer",
+            "from": {
+                "entity": "Partner",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "PartnerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "PartnerInvoices",
+            "from": {
+                "entity": "Partner",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "PartnerInvoices",
+            "from": {
+                "entity": "Partner",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "PartnerTrader",
+            "from": {
+                "entity": "Partner",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Trader",
+                "property": "PartnerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "RequestOffer",
+            "from": {
+                "entity": "Request",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "RequestId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "RequestStatusRequest",
+            "from": {
+                "entity": "RequestStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "RequestStatusId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductRequest",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductInvoices",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CountryPartner",
+            "from": {
+                "entity": "Country",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Partner",
+                "property": "CountryId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CountryRequest",
+            "from": {
+                "entity": "Country",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "CountryId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CurrencyRequest",
+            "from": {
+                "entity": "Currency",
+                "property": "Code",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "CurrencyCode",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CurrencyInvoices",
+            "from": {
+                "entity": "Currency",
+                "property": "Code",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "CurrencyCode",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CurrencyPayment",
+            "from": {
+                "entity": "Currency",
+                "property": "Code",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Payment",
+                "property": "CurrencyCode",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "RequestTypeRequest",
+            "from": {
+                "entity": "RequestType",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "RequestTypeId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OfferInvoices",
+            "from": {
+                "entity": "Offer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "OfferId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OfferStatusOffer",
+            "from": {
+                "entity": "OfferStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "OfferStatusId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "InvoicesPayment",
+            "from": {
+                "entity": "Invoices",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Payment",
+                "property": "InvoicesId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "UoMRequest",
+            "from": {
+                "entity": "UoM",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "UoMId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "UoMInvoices",
+            "from": {
+                "entity": "UoM",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "UoMId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderRequest",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Request",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderOffer",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderInvoices",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderPayment",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Payment",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        }
+    ]
+}

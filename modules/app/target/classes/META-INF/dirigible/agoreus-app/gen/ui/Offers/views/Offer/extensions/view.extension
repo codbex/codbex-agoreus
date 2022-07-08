@@ -1,0 +1,5 @@
+{
+	"description": "Offer view",
+	"extensionPoint": "launchpad-Agoreus-Offers-view",
+	"module": "agoreus-app/gen/ui/Offers/views/Offer/extensions/view.js"
+}

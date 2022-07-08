@@ -1,0 +1,5 @@
+{
+	"expression": "0 0 0 1 * ? *",
+	"handler": "agoreus-app/gen/feed/Invoices/InvoicesFeedSynchronizer.js",
+	"description": "InvoicesFeedSynchronizer Job"
+}
