@@ -1,5 +1,0 @@
-{
-	"description": "Nomenclatures tiles",
-	"extensionPoint": "launchpad-Agoreus-tiles",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/RequestStatus/extensions/tile/tile.js"
-}

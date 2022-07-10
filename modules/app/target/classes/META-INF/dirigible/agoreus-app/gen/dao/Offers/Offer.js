@@ -1,7 +1,6 @@
 var query = require("db/v4/query");
 var producer = require("messaging/v4/producer");
 var daoApi = require("db/v4/dao");
-var EntityUtils = require("agoreus-app/gen/dao/utils/EntityUtils");
 
 var dao = daoApi.create({
 	table: "AGOREUS_OFFER",
@@ -13,25 +12,33 @@ var dao = daoApi.create({
 			id: true,
 			autoIncrement: true,
 		}, {
-			name: "PartnerId",
-			column: "OFFER_PARTNERID",
-			type: "INTEGER",
-		}, {
-			name: "RequestId",
-			column: "OFFER_REQUESTID",
-			type: "INTEGER",
-		}, {
 			name: "Name",
 			column: "OFFER_NAME",
 			type: "VARCHAR",
 		}, {
 			name: "Date",
-			column: "OFFER_CREATIONDATE",
-			type: "DATE",
+			column: "OFFER_DATE",
+			type: "VARCHAR",
+		}, {
+			name: "ExpiryDate",
+			column: "OFFER_EXPIRYDATE",
+			type: "VARCHAR",
+		}, {
+			name: "ProductId",
+			column: "OFFER_PRODUCTID",
+			type: "INTEGER",
 		}, {
 			name: "Quantity",
 			column: "OFFER_QUANTITY",
 			type: "DOUBLE",
+		}, {
+			name: "UoMId",
+			column: "OFFER_UOMID",
+			type: "INTEGER",
+		}, {
+			name: "CurrencyCode",
+			column: "OFFER_CURRENCYCODE",
+			type: "CHAR",
 		}, {
 			name: "Price",
 			column: "OFFER_PRICE",
@@ -41,9 +48,17 @@ var dao = daoApi.create({
 			column: "OFFER_TOTAL",
 			type: "DOUBLE",
 		}, {
-			name: "ValidityDate",
-			column: "OFFER_VALIDITYDATE",
-			type: "DATE",
+			name: "Location",
+			column: "OFFER_LOCATION",
+			type: "VARCHAR",
+		}, {
+			name: "CountryId",
+			column: "OFFER_COUNTRYID",
+			type: "INTEGER",
+		}, {
+			name: "SupplierId",
+			column: "OFFER_SUPPLIERID",
+			type: "INTEGER",
 		}, {
 			name: "OfferStatusId",
 			column: "OFFER_OFFERSTATUSID",
@@ -56,23 +71,14 @@ var dao = daoApi.create({
 });
 
 exports.list = function(settings) {
-	return dao.list(settings).map(function(e) {
-		EntityUtils.setLocalDate(e, "Date");
-		EntityUtils.setLocalDate(e, "ValidityDate");
-		return e;
-	});
+	return dao.list(settings);
 };
 
 exports.get = function(id) {
-	var entity = dao.find(id);
-	EntityUtils.setLocalDate(entity, "Date");
-	EntityUtils.setLocalDate(entity, "ValidityDate");
-	return entity;
+	return dao.find(id);
 };
 
 exports.create = function(entity) {
-	EntityUtils.setLocalDate(entity, "Date");
-	EntityUtils.setLocalDate(entity, "ValidityDate");
 	var id = dao.insert(entity);
 	triggerEvent("Create", {
 		table: "AGOREUS_OFFER",
@@ -86,8 +92,6 @@ exports.create = function(entity) {
 };
 
 exports.update = function(entity) {
-	EntityUtils.setLocalDate(entity, "Date");
-	EntityUtils.setLocalDate(entity, "ValidityDate");
 	dao.update(entity);
 	triggerEvent("Update", {
 		table: "AGOREUS_OFFER",

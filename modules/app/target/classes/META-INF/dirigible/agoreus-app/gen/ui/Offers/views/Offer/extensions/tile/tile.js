@@ -20,7 +20,7 @@ exports.getTile = function(relativePath) {
 	return {
 		name: "Offer",
 		group: "Offers",
-		icon: "plus-circle",
+		icon: "tag",
 		location: relativePath + "services/v4/web/agoreus-app/gen/ui/Offers/index.html",
 		count: count,
 		order: "100"

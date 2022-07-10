@@ -1,5 +1,0 @@
-{
-	"description": "Offer menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Offers/views/Offer/extensions/menu/item.js"
-}

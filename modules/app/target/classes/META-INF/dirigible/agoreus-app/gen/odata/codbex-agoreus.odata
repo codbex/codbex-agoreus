@@ -48,138 +48,125 @@
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "PartnerRequest"
-                },
-                {
-                    "name": "Offer",
-                    "association": "PartnerOffer"
-                },
-                {
-                    "name": "Invoices",
-                    "association": "PartnerInvoices"
-                },
-                {
-                    "name": "Invoices",
-                    "association": "PartnerInvoices"
-                },
-                {
                     "name": "Trader",
                     "association": "PartnerTrader"
+                },
+                {
+                    "name": "Buyer",
+                    "association": "PartnerBuyer"
+                },
+                {
+                    "name": "Supplier",
+                    "association": "PartnerSupplier"
                 }
             ]
         },
         {
-            "name": "Request",
-            "alias": "Request",
-            "table": "AGOREUS_REQUEST",
+            "name": "Inquiry",
+            "alias": "Inquiry",
+            "table": "AGOREUS_INQUIRY",
             "properties": [
                 {
                     "name": "Id",
-                    "column": "REQUEST_ID"
-                },
-                {
-                    "name": "RequestTypeId",
-                    "column": "REQUEST_REQUESTTYPEID",
-                    "nullable": true
-                },
-                {
-                    "name": "PartnerId",
-                    "column": "REQUEST_PARTNERID",
-                    "nullable": true
+                    "column": "INQUIRY_ID"
                 },
                 {
                     "name": "Name",
-                    "column": "REQUEST_NAME",
+                    "column": "INQUIRY_NAME",
                     "nullable": true
                 },
                 {
                     "name": "Date",
-                    "column": "REQUEST_CREATIONDATE",
+                    "column": "INQUIRY_CREATIONDATE",
                     "nullable": true
                 },
                 {
-                    "name": "RequestStatusId",
-                    "column": "REQUEST_REQUESTSTATUSID",
+                    "name": "BuyerId",
+                    "column": "INQUIRY_BUYERID",
                     "nullable": true
                 },
                 {
                     "name": "ProductId",
-                    "column": "REQUEST_PRODUCTID",
+                    "column": "INQUIRY_PRODUCTID",
                     "nullable": true
                 },
                 {
                     "name": "Quantity",
-                    "column": "REQUEST_QUANTITY",
+                    "column": "INQUIRY_QUANTITY",
                     "nullable": true
                 },
                 {
                     "name": "UoMId",
-                    "column": "REQUEST_UOMID",
+                    "column": "INQUIRY_UOMID",
                     "nullable": true
                 },
                 {
                     "name": "CurrencyCode",
-                    "column": "REQUEST_CURRENCYCODE",
+                    "column": "INQUIRY_CURRENCYCODE",
                     "nullable": true
                 },
                 {
                     "name": "Price",
-                    "column": "REQUEST_PRICE",
+                    "column": "INQUIRY_PRICE",
                     "nullable": true
                 },
                 {
                     "name": "Total",
-                    "column": "REQUEST_TOTAL",
+                    "column": "INQUIRY_TOTAL",
                     "nullable": true
                 },
                 {
                     "name": "DueDate",
-                    "column": "REQUEST_DUEDATE",
+                    "column": "INQUIRY_DUEDATE",
                     "nullable": true
                 },
                 {
                     "name": "Location",
-                    "column": "REQUEST_LOCATION",
+                    "column": "INQUIRY_LOCATION",
                     "nullable": true
                 },
                 {
                     "name": "CountryId",
-                    "column": "REQUEST_COUNTRYID",
+                    "column": "INQUIRY_COUNTRYID",
                     "nullable": true
                 },
                 {
                     "name": "TraderId",
-                    "column": "REQUEST_TRADERID",
+                    "column": "INQUIRY_TRADERID",
+                    "nullable": true
+                },
+                {
+                    "name": "InquiryStatusId",
+                    "column": "INQUIRY_INQUIRYSTATUSID",
                     "nullable": true
                 }
             ],
             "navigations": [
                 {
-                    "name": "Offer",
-                    "association": "RequestOffer"
+                    "name": "Quotation",
+                    "association": "InquiryQuotation"
                 }
             ]
         },
         {
-            "name": "RequestStatus",
-            "alias": "RequestStatus",
-            "table": "AGOREUS_REQUESTSTATUS",
+            "name": "InquiryStatus",
+            "alias": "InquiryStatus",
+            "table": "AGOREUS_INQUIRYSTATUS",
             "properties": [
                 {
                     "name": "Id",
-                    "column": "REQUESTSTATUS_ID"
+                    "column": "INQUIRYSTATUS_ID"
                 },
                 {
                     "name": "Name",
-                    "column": "REQUESTSTATUS_NAME",
+                    "column": "INQUIRYSTATUS_NAME",
                     "nullable": true
                 }
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "RequestStatusRequest"
+                    "name": "Inquiry",
+                    "association": "InquiryStatusInquiry"
                 }
             ]
         },
@@ -210,12 +197,28 @@
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "ProductRequest"
+                    "name": "Inquiry",
+                    "association": "ProductInquiry"
+                },
+                {
+                    "name": "Quotation",
+                    "association": "ProductQuotation"
                 },
                 {
                     "name": "Invoices",
                     "association": "ProductInvoices"
+                },
+                {
+                    "name": "Order",
+                    "association": "ProductOrder"
+                },
+                {
+                    "name": "Offer",
+                    "association": "ProductOffer"
+                },
+                {
+                    "name": "Bid",
+                    "association": "ProductBid"
                 }
             ]
         },
@@ -255,8 +258,12 @@
                     "association": "CountryPartner"
                 },
                 {
-                    "name": "Request",
-                    "association": "CountryRequest"
+                    "name": "Inquiry",
+                    "association": "CountryInquiry"
+                },
+                {
+                    "name": "Offer",
+                    "association": "CountryOffer"
                 }
             ]
         },
@@ -292,8 +299,12 @@
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "CurrencyRequest"
+                    "name": "Inquiry",
+                    "association": "CurrencyInquiry"
+                },
+                {
+                    "name": "Quotation",
+                    "association": "CurrencyQuotation"
                 },
                 {
                     "name": "Invoices",
@@ -302,48 +313,33 @@
                 {
                     "name": "Payment",
                     "association": "CurrencyPayment"
-                }
-            ]
-        },
-        {
-            "name": "RequestType",
-            "alias": "RequestType",
-            "table": "AGOREUS_REQUESTTYPE",
-            "properties": [
-                {
-                    "name": "Id",
-                    "column": "REQUESTTYPE_ID"
                 },
                 {
-                    "name": "Name",
-                    "column": "REQUESTTYPE_NAME",
-                    "nullable": true
-                }
-            ],
-            "navigations": [
+                    "name": "Order",
+                    "association": "CurrencyOrder"
+                },
                 {
-                    "name": "Request",
-                    "association": "RequestTypeRequest"
+                    "name": "Offer",
+                    "association": "CurrencyOffer"
+                },
+                {
+                    "name": "Bid",
+                    "association": "CurrencyBid"
                 }
             ]
         },
         {
-            "name": "Offer",
-            "alias": "Offer",
-            "table": "AGOREUS_OFFER",
+            "name": "Quotation",
+            "alias": "Quotation",
+            "table": "AGOREUS_QUOTATION",
             "properties": [
                 {
                     "name": "Id",
                     "column": "OFFER_ID"
                 },
                 {
-                    "name": "PartnerId",
-                    "column": "OFFER_PARTNERID",
-                    "nullable": true
-                },
-                {
-                    "name": "RequestId",
-                    "column": "OFFER_REQUESTID",
+                    "name": "InquiryId",
+                    "column": "OFFER_INQUIRYID",
                     "nullable": true
                 },
                 {
@@ -357,8 +353,28 @@
                     "nullable": true
                 },
                 {
+                    "name": "ValidityDate",
+                    "column": "OFFER_VALIDITYDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "AGOREUS_QUOTATION_PRODUCTID",
+                    "nullable": true
+                },
+                {
                     "name": "Quantity",
                     "column": "OFFER_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "AGOREUS_QUOTATION_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "AGOREUS_QUOTATION_CURRENCYCODE",
                     "nullable": true
                 },
                 {
@@ -372,47 +388,47 @@
                     "nullable": true
                 },
                 {
-                    "name": "ValidityDate",
-                    "column": "OFFER_VALIDITYDATE",
-                    "nullable": true
-                },
-                {
-                    "name": "OfferStatusId",
-                    "column": "OFFER_OFFERSTATUSID",
-                    "nullable": true
-                },
-                {
                     "name": "TraderId",
                     "column": "OFFER_TRADERID",
+                    "nullable": true
+                },
+                {
+                    "name": "SupplierId",
+                    "column": "AGOREUS_OFFER_SUPPLIERID",
+                    "nullable": true
+                },
+                {
+                    "name": "QuotationStatusId",
+                    "column": "QUOTATION_QUOTATIONSTATUSID",
                     "nullable": true
                 }
             ],
             "navigations": [
                 {
-                    "name": "Invoices",
-                    "association": "OfferInvoices"
+                    "name": "PurchaseOrder",
+                    "association": "QuotationPurchaseOrder"
                 }
             ]
         },
         {
-            "name": "OfferStatus",
-            "alias": "OfferStatus",
-            "table": "AGOREUS_OFFERSTATUS",
+            "name": "QuotationStatus",
+            "alias": "QuotationStatus",
+            "table": "AGOREUS_QUOTATIONSTATUS",
             "properties": [
                 {
                     "name": "Id",
-                    "column": "OFFERSTATUS_ID"
+                    "column": "QUOTATIONSTATUS_ID"
                 },
                 {
                     "name": "Name",
-                    "column": "OFFERSTATUS_NAME",
+                    "column": "QUOTATIONSTATUS_NAME",
                     "nullable": true
                 }
             ],
             "navigations": [
                 {
-                    "name": "Offer",
-                    "association": "OfferStatusOffer"
+                    "name": "Quotation",
+                    "association": "QuotationStatusQuotation"
                 }
             ]
         },
@@ -428,11 +444,6 @@
                 {
                     "name": "Date",
                     "column": "INVOICES_DATE",
-                    "nullable": true
-                },
-                {
-                    "name": "OfferId",
-                    "column": "INVOICES_OFFERID",
                     "nullable": true
                 },
                 {
@@ -466,6 +477,11 @@
                     "nullable": true
                 },
                 {
+                    "name": "TraderId",
+                    "column": "INVOICES_TRADERID",
+                    "nullable": true
+                },
+                {
                     "name": "BuyerId",
                     "column": "INVOICES_BUYERID",
                     "nullable": true
@@ -476,8 +492,8 @@
                     "nullable": true
                 },
                 {
-                    "name": "TraderId",
-                    "column": "INVOICES_TRADERID",
+                    "name": "OrderId",
+                    "column": "AGOREUS_INVOICES_ORDERID",
                     "nullable": true
                 }
             ],
@@ -515,6 +531,16 @@
                 {
                     "name": "TraderId",
                     "column": "PAYMENT_TRADERID",
+                    "nullable": true
+                },
+                {
+                    "name": "BuyerId",
+                    "column": "PAYMENT_BUYERID",
+                    "nullable": true
+                },
+                {
+                    "name": "SupplierId",
+                    "column": "PAYMENT_SUPPLIERID",
                     "nullable": true
                 }
             ],
@@ -562,12 +588,28 @@
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "UoMRequest"
+                    "name": "Inquiry",
+                    "association": "UoMInquiry"
+                },
+                {
+                    "name": "Quotation",
+                    "association": "UoMQuotation"
                 },
                 {
                     "name": "Invoices",
                     "association": "UoMInvoices"
+                },
+                {
+                    "name": "Order",
+                    "association": "UoMOrder"
+                },
+                {
+                    "name": "Offer",
+                    "association": "UoMOffer"
+                },
+                {
+                    "name": "Bid",
+                    "association": "UoMBid"
                 }
             ]
         },
@@ -598,12 +640,12 @@
             ],
             "navigations": [
                 {
-                    "name": "Request",
-                    "association": "TraderRequest"
+                    "name": "Inquiry",
+                    "association": "TraderInquiry"
                 },
                 {
-                    "name": "Offer",
-                    "association": "TraderOffer"
+                    "name": "Quotation",
+                    "association": "TraderQuotation"
                 },
                 {
                     "name": "Invoices",
@@ -612,63 +654,437 @@
                 {
                     "name": "Payment",
                     "association": "TraderPayment"
+                },
+                {
+                    "name": "Offer",
+                    "association": "TraderOffer"
+                },
+                {
+                    "name": "Bid",
+                    "association": "TraderBid"
+                }
+            ]
+        },
+        {
+            "name": "Buyer",
+            "alias": "Buyer",
+            "table": "BUYER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "BUYER_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "BUYER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "PartnerId",
+                    "column": "BUYER_PARTNERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Inquiry",
+                    "association": "BuyerInquiry"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "BuyerInvoices"
+                },
+                {
+                    "name": "Payment",
+                    "association": "BuyerPayment"
+                },
+                {
+                    "name": "Order",
+                    "association": "BuyerOrder"
+                },
+                {
+                    "name": "Bid",
+                    "association": "BuyerBid"
+                }
+            ]
+        },
+        {
+            "name": "Supplier",
+            "alias": "Supplier",
+            "table": "SUPPLIER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "SUPPLIER_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "SUPPLIER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "PartnerId",
+                    "column": "SUPPLIER_PARTNERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Quotation",
+                    "association": "SupplierQuotation"
+                },
+                {
+                    "name": "Invoices",
+                    "association": "SupplierInvoices"
+                },
+                {
+                    "name": "Payment",
+                    "association": "SupplierPayment"
+                },
+                {
+                    "name": "Order",
+                    "association": "SupplierOrder"
+                },
+                {
+                    "name": "Offer",
+                    "association": "SupplierOffer"
+                }
+            ]
+        },
+        {
+            "name": "Order",
+            "alias": "Order",
+            "table": "AGOREUS_ORDER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "ORDER_ID"
+                },
+                {
+                    "name": "BuyerId",
+                    "column": "ORDER_BUYERID",
+                    "nullable": true
+                },
+                {
+                    "name": "SupplierId",
+                    "column": "ORDER_SUPPLIERID",
+                    "nullable": true
+                },
+                {
+                    "name": "Name",
+                    "column": "ORDER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Date",
+                    "column": "ORDER_DATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "ORDER_PRODUCTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "ORDER_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "ORDER_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "ORDER_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "ORDER_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "ORDER_TOTAL",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Invoices",
+                    "association": "OrderInvoices"
+                },
+                {
+                    "name": "PurchaseOrder",
+                    "association": "OrderPurchaseOrder"
+                },
+                {
+                    "name": "SalesOrder",
+                    "association": "OrderSalesOrder"
+                }
+            ]
+        },
+        {
+            "name": "PurchaseOrder",
+            "alias": "PurchaseOrder",
+            "table": "AGOREUS_PURCHASEORDER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "PURCHASEORDER_ID"
+                },
+                {
+                    "name": "OrderId",
+                    "column": "PURCHASEORDER_ORDERID",
+                    "nullable": true
+                },
+                {
+                    "name": "QuotationId",
+                    "column": "PURCHASEORDER_QUOTATIONID",
+                    "nullable": true
+                }
+            ],
+            "navigations": []
+        },
+        {
+            "name": "SalesOrder",
+            "alias": "SalesOrder",
+            "table": "AGOREUS_SALESORDER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "SALESORDER_ENTITY17ID"
+                },
+                {
+                    "name": "OrderId",
+                    "column": "SALESORDER_ORDERID",
+                    "nullable": true
+                },
+                {
+                    "name": "BidId",
+                    "column": "SALESORDER_BIDID",
+                    "nullable": true
+                }
+            ],
+            "navigations": []
+        },
+        {
+            "name": "Offer",
+            "alias": "Offer",
+            "table": "AGOREUS_OFFER",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "OFFER_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "OFFER_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Date",
+                    "column": "OFFER_DATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ExpiryDate",
+                    "column": "OFFER_EXPIRYDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "OFFER_PRODUCTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "OFFER_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "OFFER_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "OFFER_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "OFFER_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "OFFER_TOTAL",
+                    "nullable": true
+                },
+                {
+                    "name": "Location",
+                    "column": "OFFER_LOCATION",
+                    "nullable": true
+                },
+                {
+                    "name": "CountryId",
+                    "column": "OFFER_COUNTRYID",
+                    "nullable": true
+                },
+                {
+                    "name": "SupplierId",
+                    "column": "OFFER_SUPPLIERID",
+                    "nullable": true
+                },
+                {
+                    "name": "OfferStatusId",
+                    "column": "OFFER_OFFERSTATUSID",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "OFFER_TRADERID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Bid",
+                    "association": "OfferBid"
+                }
+            ]
+        },
+        {
+            "name": "Bid",
+            "alias": "Bid",
+            "table": "AGOREUS_BID",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "BID_ID"
+                },
+                {
+                    "name": "OfferId",
+                    "column": "BID_OFFERID",
+                    "nullable": true
+                },
+                {
+                    "name": "Name",
+                    "column": "BID_NAME",
+                    "nullable": true
+                },
+                {
+                    "name": "Date",
+                    "column": "BID_DATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ValidityDate",
+                    "column": "BID_VALIDITYDATE",
+                    "nullable": true
+                },
+                {
+                    "name": "ProductId",
+                    "column": "BID_PRODUCTID",
+                    "nullable": true
+                },
+                {
+                    "name": "Quantity",
+                    "column": "BID_QUANTITY",
+                    "nullable": true
+                },
+                {
+                    "name": "UoMId",
+                    "column": "BID_UOMID",
+                    "nullable": true
+                },
+                {
+                    "name": "CurrencyCode",
+                    "column": "BID_CURRENCYCODE",
+                    "nullable": true
+                },
+                {
+                    "name": "Price",
+                    "column": "BID_PRICE",
+                    "nullable": true
+                },
+                {
+                    "name": "Total",
+                    "column": "BID_TOTAL",
+                    "nullable": true
+                },
+                {
+                    "name": "BuyerId",
+                    "column": "BID_BUYERID",
+                    "nullable": true
+                },
+                {
+                    "name": "TraderId",
+                    "column": "BID_TRADERID",
+                    "nullable": true
+                },
+                {
+                    "name": "BidStatusId",
+                    "column": "BID_BIDSTATUSID",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "SalesOrder",
+                    "association": "BidSalesOrder"
+                }
+            ]
+        },
+        {
+            "name": "OfferStatus",
+            "alias": "OfferStatus",
+            "table": "AGOREUS_OFFERSTATUS",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "OFFERSTATUS_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "OFFERSTATUS_NAME",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Offer",
+                    "association": "OfferStatusOffer"
+                }
+            ]
+        },
+        {
+            "name": "BidStatus",
+            "alias": "BidStatus",
+            "table": "AGOREUS_BIDSTATUS",
+            "properties": [
+                {
+                    "name": "Id",
+                    "column": "BIDSTATUS_ID"
+                },
+                {
+                    "name": "Name",
+                    "column": "BIDSTATUS_NAME",
+                    "nullable": true
+                }
+            ],
+            "navigations": [
+                {
+                    "name": "Bid",
+                    "association": "BidStatusBid"
                 }
             ]
         }
     ],
     "associations": [
-        {
-            "name": "PartnerRequest",
-            "from": {
-                "entity": "Partner",
-                "property": "Id",
-                "multiplicity": "1"
-            },
-            "to": {
-                "entity": "Request",
-                "property": "PartnerId",
-                "multiplicity": "*"
-            }
-        },
-        {
-            "name": "PartnerOffer",
-            "from": {
-                "entity": "Partner",
-                "property": "Id",
-                "multiplicity": "1"
-            },
-            "to": {
-                "entity": "Offer",
-                "property": "PartnerId",
-                "multiplicity": "*"
-            }
-        },
-        {
-            "name": "PartnerInvoices",
-            "from": {
-                "entity": "Partner",
-                "property": "Id",
-                "multiplicity": "1"
-            },
-            "to": {
-                "entity": "Invoices",
-                "property": "BuyerId",
-                "multiplicity": "*"
-            }
-        },
-        {
-            "name": "PartnerInvoices",
-            "from": {
-                "entity": "Partner",
-                "property": "Id",
-                "multiplicity": "1"
-            },
-            "to": {
-                "entity": "Invoices",
-                "property": "SupplierId",
-                "multiplicity": "*"
-            }
-        },
         {
             "name": "PartnerTrader",
             "from": {
@@ -683,40 +1099,79 @@
             }
         },
         {
-            "name": "RequestOffer",
+            "name": "PartnerBuyer",
             "from": {
-                "entity": "Request",
+                "entity": "Partner",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Offer",
-                "property": "RequestId",
+                "entity": "Buyer",
+                "property": "PartnerId",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "RequestStatusRequest",
+            "name": "PartnerSupplier",
             "from": {
-                "entity": "RequestStatus",
+                "entity": "Partner",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
-                "property": "RequestStatusId",
+                "entity": "Supplier",
+                "property": "PartnerId",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "ProductRequest",
+            "name": "InquiryQuotation",
+            "from": {
+                "entity": "Inquiry",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
+                "property": "InquiryId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "InquiryStatusInquiry",
+            "from": {
+                "entity": "InquiryStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Inquiry",
+                "property": "InquiryStatusId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductInquiry",
             "from": {
                 "entity": "Product",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
+                "entity": "Inquiry",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductQuotation",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
                 "property": "ProductId",
                 "multiplicity": "*"
             }
@@ -735,6 +1190,45 @@
             }
         },
         {
+            "name": "ProductOrder",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Order",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductOffer",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "ProductBid",
+            "from": {
+                "entity": "Product",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "ProductId",
+                "multiplicity": "*"
+            }
+        },
+        {
             "name": "CountryPartner",
             "from": {
                 "entity": "Country",
@@ -748,27 +1242,53 @@
             }
         },
         {
-            "name": "CountryRequest",
+            "name": "CountryInquiry",
             "from": {
                 "entity": "Country",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
+                "entity": "Inquiry",
                 "property": "CountryId",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "CurrencyRequest",
+            "name": "CountryOffer",
+            "from": {
+                "entity": "Country",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "CountryId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CurrencyInquiry",
             "from": {
                 "entity": "Currency",
                 "property": "Code",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
+                "entity": "Inquiry",
+                "property": "CurrencyCode",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "CurrencyQuotation",
+            "from": {
+                "entity": "Currency",
+                "property": "Code",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
                 "property": "CurrencyCode",
                 "multiplicity": "*"
             }
@@ -800,41 +1320,67 @@
             }
         },
         {
-            "name": "RequestTypeRequest",
+            "name": "CurrencyOrder",
             "from": {
-                "entity": "RequestType",
-                "property": "Id",
+                "entity": "Currency",
+                "property": "Code",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
-                "property": "RequestTypeId",
+                "entity": "Order",
+                "property": "CurrencyCode",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "OfferInvoices",
+            "name": "CurrencyOffer",
             "from": {
-                "entity": "Offer",
-                "property": "Id",
+                "entity": "Currency",
+                "property": "Code",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Invoices",
-                "property": "OfferId",
+                "entity": "Offer",
+                "property": "CurrencyCode",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "OfferStatusOffer",
+            "name": "CurrencyBid",
             "from": {
-                "entity": "OfferStatus",
+                "entity": "Currency",
+                "property": "Code",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "CurrencyCode",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "QuotationPurchaseOrder",
+            "from": {
+                "entity": "Quotation",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Offer",
-                "property": "OfferStatusId",
+                "entity": "PurchaseOrder",
+                "property": "QuotationId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "QuotationStatusQuotation",
+            "from": {
+                "entity": "QuotationStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
+                "property": "QuotationStatusId",
                 "multiplicity": "*"
             }
         },
@@ -852,14 +1398,27 @@
             }
         },
         {
-            "name": "UoMRequest",
+            "name": "UoMInquiry",
             "from": {
                 "entity": "UoM",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
+                "entity": "Inquiry",
+                "property": "UoMId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "UoMQuotation",
+            "from": {
+                "entity": "UoM",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
                 "property": "UoMId",
                 "multiplicity": "*"
             }
@@ -878,27 +1437,66 @@
             }
         },
         {
-            "name": "TraderRequest",
+            "name": "UoMOrder",
             "from": {
-                "entity": "Trader",
+                "entity": "UoM",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
-                "entity": "Request",
-                "property": "TraderId",
+                "entity": "Order",
+                "property": "UoMId",
                 "multiplicity": "*"
             }
         },
         {
-            "name": "TraderOffer",
+            "name": "UoMOffer",
             "from": {
-                "entity": "Trader",
+                "entity": "UoM",
                 "property": "Id",
                 "multiplicity": "1"
             },
             "to": {
                 "entity": "Offer",
+                "property": "UoMId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "UoMBid",
+            "from": {
+                "entity": "UoM",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "UoMId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderInquiry",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Inquiry",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderQuotation",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
                 "property": "TraderId",
                 "multiplicity": "*"
             }
@@ -926,6 +1524,253 @@
             "to": {
                 "entity": "Payment",
                 "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderOffer",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "TraderBid",
+            "from": {
+                "entity": "Trader",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "TraderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BuyerInquiry",
+            "from": {
+                "entity": "Buyer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Inquiry",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BuyerInvoices",
+            "from": {
+                "entity": "Buyer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BuyerPayment",
+            "from": {
+                "entity": "Buyer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Payment",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BuyerOrder",
+            "from": {
+                "entity": "Buyer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Order",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BuyerBid",
+            "from": {
+                "entity": "Buyer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "BuyerId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "SupplierQuotation",
+            "from": {
+                "entity": "Supplier",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Quotation",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "SupplierInvoices",
+            "from": {
+                "entity": "Supplier",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "SupplierPayment",
+            "from": {
+                "entity": "Supplier",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Payment",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "SupplierOrder",
+            "from": {
+                "entity": "Supplier",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Order",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "SupplierOffer",
+            "from": {
+                "entity": "Supplier",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "SupplierId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OrderInvoices",
+            "from": {
+                "entity": "Order",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Invoices",
+                "property": "OrderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OrderPurchaseOrder",
+            "from": {
+                "entity": "Order",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "PurchaseOrder",
+                "property": "OrderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OrderSalesOrder",
+            "from": {
+                "entity": "Order",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "SalesOrder",
+                "property": "OrderId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OfferBid",
+            "from": {
+                "entity": "Offer",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "OfferId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BidSalesOrder",
+            "from": {
+                "entity": "Bid",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "SalesOrder",
+                "property": "BidId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "OfferStatusOffer",
+            "from": {
+                "entity": "OfferStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Offer",
+                "property": "OfferStatusId",
+                "multiplicity": "*"
+            }
+        },
+        {
+            "name": "BidStatusBid",
+            "from": {
+                "entity": "BidStatus",
+                "property": "Id",
+                "multiplicity": "1"
+            },
+            "to": {
+                "entity": "Bid",
+                "property": "BidStatusId",
                 "multiplicity": "*"
             }
         }

@@ -1,0 +1,5 @@
+{
+	"description": "Inquiries tiles",
+	"extensionPoint": "launchpad-agoreus-tiles",
+	"module": "agoreus-app/gen/ui/Inquiries/views/Inquiry/extensions/tile/tile.js"
+}

@@ -20,7 +20,7 @@ exports.getTile = function(relativePath) {
 	return {
 		name: "Payment",
 		group: "Invoices",
-		icon: "file-o",
+		icon: "dollar",
 		location: relativePath + "services/v4/web/agoreus-app/gen/ui/Invoices/index.html",
 		count: count,
 		order: "100"

@@ -1,5 +1,5 @@
 {
 	"description": "Partner view",
-	"extensionPoint": "launchpad-Agoreus-Partners-view",
+	"extensionPoint": "launchpad-agoreus-Partners-view",
 	"module": "agoreus-app/gen/ui/Partners/views/Partner/extensions/view.js"
 }

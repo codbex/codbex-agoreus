@@ -28,16 +28,16 @@
 					<th>#</th>
 					<th class="text-capitalize">Id</th>
 					<th class="text-capitalize">Date</th>
-					<th class="text-capitalize">OfferId</th>
 					<th class="text-capitalize">ProductId</th>
 					<th class="text-capitalize">Quantity</th>
 					<th class="text-capitalize">UoMId</th>
 					<th class="text-capitalize">CurrencyCode</th>
 					<th class="text-capitalize">Price</th>
 					<th class="text-capitalize">Total</th>
+					<th class="text-capitalize">TraderId</th>
 					<th class="text-capitalize">BuyerId</th>
 					<th class="text-capitalize">SupplierId</th>
-					<th class="text-capitalize">TraderId</th>
+					<th class="text-capitalize">OrderId</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -46,16 +46,16 @@
 					<td>{{(dataPage - 1) * dataLimit + $index + 1}}</td>
 					<td>{{next.Id}}</td>
 					<td>{{next.Date | date:dateFormat}}</td>
-					<td>{{offeridOptionValue(next.OfferId)}}</td>
 					<td>{{productidOptionValue(next.ProductId)}}</td>
 					<td>{{next.Quantity}}</td>
 					<td>{{next.UoMId}}</td>
 					<td>{{currencycodeOptionValue(next.CurrencyCode)}}</td>
 					<td>{{next.Price}}</td>
 					<td>{{next.Total}}</td>
+					<td>{{next.TraderId}}</td>
 					<td>{{buyeridOptionValue(next.BuyerId)}}</td>
 					<td>{{supplieridOptionValue(next.SupplierId)}}</td>
-					<td>{{next.TraderId}}</td>
+					<td>{{next.OrderId}}</td>
 					<td>
 						<i class="close fa fa-remove" ng-click="openDeleteDialog(next)" style="font-size: 1.4em"></i>
 						<i class="close fa fa-bars" ng-click="openEditDialog(next)" style="margin-right: 0.5em; font-size: 1.4em"></i>					</td>
@@ -100,10 +100,6 @@
 		           			</p>
 						</div>
 						<div class="form-group">
-							<label>OfferId</label>
-							<select  class="form-control" ng-options="o.Id as o.Name for o in offeridOptions" ng-model="entity.OfferId" ng-change="updateCalculatedProperties()"></select>
-						</div>
-						<div class="form-group">
 							<label>ProductId</label>
 							<select  class="form-control" ng-options="o.Id as o.Name for o in productidOptions" ng-model="entity.ProductId" ng-change="updateCalculatedProperties()"></select>
 						</div>
@@ -128,6 +124,10 @@
 							<input   type="number" class="form-control" placeholder="Enter total" ng-model="entity.Total" ng-change="updateCalculatedProperties()">
 						</div>
 						<div class="form-group">
+							<label>TraderId</label>
+							<input   type="text"  maxlength="20" class="form-control" placeholder="Enter traderid" ng-model="entity.TraderId" ng-change="updateCalculatedProperties()">
+						</div>
+						<div class="form-group">
 							<label>BuyerId</label>
 							<select  class="form-control" ng-options="o.Id as o.Name for o in buyeridOptions" ng-model="entity.BuyerId" ng-change="updateCalculatedProperties()"></select>
 						</div>
@@ -136,8 +136,8 @@
 							<select  class="form-control" ng-options="o.Id as o.Name for o in supplieridOptions" ng-model="entity.SupplierId" ng-change="updateCalculatedProperties()"></select>
 						</div>
 						<div class="form-group">
-							<label>TraderId</label>
-							<input   type="text"  maxlength="20" class="form-control" placeholder="Enter traderid" ng-model="entity.TraderId" ng-change="updateCalculatedProperties()">
+							<label>OrderId</label>
+							<input   type="text"  maxlength="20" class="form-control" placeholder="Enter orderid" ng-model="entity.OrderId" ng-change="updateCalculatedProperties()">
 						</div>
 						<div class="modal-footer">
 							<input type="submit" value="Save" class="btn btn-primary btn-lg" ng-show="actionType === 'new'" ng-click="create()">

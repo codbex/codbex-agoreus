@@ -17,10 +17,6 @@ var dao = daoApi.create({
 			column: "INVOICES_DATE",
 			type: "DATE",
 		}, {
-			name: "OfferId",
-			column: "INVOICES_OFFERID",
-			type: "INTEGER",
-		}, {
 			name: "ProductId",
 			column: "INVOICES_PRODUCTID",
 			type: "INTEGER",
@@ -45,6 +41,10 @@ var dao = daoApi.create({
 			column: "INVOICES_TOTAL",
 			type: "DOUBLE",
 		}, {
+			name: "TraderId",
+			column: "INVOICES_TRADERID",
+			type: "INTEGER",
+		}, {
 			name: "BuyerId",
 			column: "INVOICES_BUYERID",
 			type: "INTEGER",
@@ -53,8 +53,8 @@ var dao = daoApi.create({
 			column: "INVOICES_SUPPLIERID",
 			type: "INTEGER",
 		}, {
-			name: "TraderId",
-			column: "INVOICES_TRADERID",
+			name: "OrderId",
+			column: "AGOREUS_INVOICES_ORDERID",
 			type: "INTEGER",
 		}]
 });

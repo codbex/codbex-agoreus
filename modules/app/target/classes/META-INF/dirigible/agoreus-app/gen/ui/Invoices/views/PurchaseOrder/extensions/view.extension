@@ -1,0 +1,5 @@
+{
+	"description": "PurchaseOrder view",
+	"extensionPoint": "launchpad-agoreus-Invoices-view",
+	"module": "agoreus-app/gen/ui/Invoices/views/PurchaseOrder/extensions/view.js"
+}

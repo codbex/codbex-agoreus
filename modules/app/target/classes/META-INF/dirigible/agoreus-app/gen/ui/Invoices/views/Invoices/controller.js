@@ -37,20 +37,17 @@ angular.module('page')
 		onEntityRefresh: function(callback) {
 			on('agoreus-app.Invoices.Invoices.refresh', callback);
 		},
-		onOfferModified: function(callback) {
-			on('agoreus-app.Invoices.Offer.modified', callback);
-		},
 		onProductModified: function(callback) {
 			on('agoreus-app.Invoices.Product.modified', callback);
 		},
 		onCurrencyModified: function(callback) {
 			on('agoreus-app.Invoices.Currency.modified', callback);
 		},
-		onPartnerModified: function(callback) {
-			on('agoreus-app.Invoices.Partner.modified', callback);
+		onBuyerModified: function(callback) {
+			on('agoreus-app.Invoices.Buyer.modified', callback);
 		},
-		onPartnerModified: function(callback) {
-			on('agoreus-app.Invoices.Partner.modified', callback);
+		onSupplierModified: function(callback) {
+			on('agoreus-app.Invoices.Supplier.modified', callback);
 		},
 		messageEntityModified: function() {
 			message('modified');
@@ -60,13 +57,10 @@ angular.module('page')
 .controller('PageController', function ($scope, $http, $messageHub) {
 
 	var api = '/services/v4/js/agoreus-app/gen/api/Invoices/Invoices.js';
-	var offeridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Offers/Offer.js';
-	var productidOptionsApi = '/services/v4/js/agoreus-app/gen/api/Entities/Product.js';
-	var currencycodeOptionsApi = '/services/v4/js/agoreus-app/gen/api/Entities/Currency.js';
-	var buyeridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Partner.js';
-	var supplieridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Partner.js';
-
-	$scope.offeridOptions = [];
+	var productidOptionsApi = '/services/v4/js/agoreus-app/gen/api/Nomenclatures/Product.js';
+	var currencycodeOptionsApi = '/services/v4/js/agoreus-app/gen/api/Nomenclatures/Currency.js';
+	var buyeridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Buyer.js';
+	var supplieridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Supplier.js';
 
 	$scope.productidOptions = [];
 
@@ -85,14 +79,6 @@ angular.module('page')
 	$scope.dateFormat = $scope.dateFormats[0];
 	$scope.monthFormat = $scope.monthFormats[1];
 	$scope.weekFormat = $scope.weekFormats[3];
-
-	function offeridOptionsLoad() {
-		$http.get(offeridOptionsApi)
-		.then(function(data) {
-			$scope.offeridOptions = data.data;
-		});
-	}
-	offeridOptionsLoad();
 
 	function productidOptionsLoad() {
 		$http.get(productidOptionsApi)
@@ -235,14 +221,6 @@ angular.module('page')
 		opened: false
 	};
 
-	$scope.offeridOptionValue = function(optionKey) {
-		for (var i = 0 ; i < $scope.offeridOptions.length; i ++) {
-			if ($scope.offeridOptions[i].Id === optionKey) {
-				return $scope.offeridOptions[i].Name;
-			}
-		}
-		return null;
-	};
 	$scope.productidOptionValue = function(optionKey) {
 		for (var i = 0 ; i < $scope.productidOptions.length; i ++) {
 			if ($scope.productidOptions[i].Id === optionKey) {
@@ -277,11 +255,10 @@ angular.module('page')
 	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
-	$messageHub.onOfferModified(offeridOptionsLoad);
 	$messageHub.onProductModified(productidOptionsLoad);
 	$messageHub.onCurrencyModified(currencycodeOptionsLoad);
-	$messageHub.onPartnerModified(buyeridOptionsLoad);
-	$messageHub.onPartnerModified(supplieridOptionsLoad);
+	$messageHub.onBuyerModified(buyeridOptionsLoad);
+	$messageHub.onSupplierModified(supplieridOptionsLoad);
 
 	function toggleEntityModal() {
 		$('#entityModal').modal('toggle');

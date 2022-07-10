@@ -15,7 +15,7 @@ var response = require("http/v4/response");
 var perspectives = [];
 
 var relativePath = getRelativePath(request.getParameter("pathSegments"));
-var perspectiveExtensions = extensions.getExtensions("launchpad-Agoreus-perspective");
+var perspectiveExtensions = extensions.getExtensions("launchpad-agoreus-perspective");
 for (var i = 0; perspectiveExtensions !== null && i < perspectiveExtensions.length; i++) {
     var perspectiveExtension = require(perspectiveExtensions[i]);
     var perspective = perspectiveExtension.getPerspective(relativePath);

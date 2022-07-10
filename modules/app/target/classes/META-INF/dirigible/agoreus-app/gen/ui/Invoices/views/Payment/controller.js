@@ -43,6 +43,12 @@ angular.module('page')
 		onCurrencyModified: function(callback) {
 			on('agoreus-app.Invoices.Currency.modified', callback);
 		},
+		onBuyerModified: function(callback) {
+			on('agoreus-app.Invoices.Buyer.modified', callback);
+		},
+		onSupplierModified: function(callback) {
+			on('agoreus-app.Invoices.Supplier.modified', callback);
+		},
 		messageEntityModified: function() {
 			message('modified');
 		}
@@ -52,11 +58,17 @@ angular.module('page')
 
 	var api = '/services/v4/js/agoreus-app/gen/api/Invoices/Payment.js';
 	var invoicesidOptionsApi = '/services/v4/js/agoreus-app/gen/api/Invoices/Invoices.js';
-	var currencycodeOptionsApi = '/services/v4/js/agoreus-app/gen/api/Entities/Currency.js';
+	var currencycodeOptionsApi = '/services/v4/js/agoreus-app/gen/api/Nomenclatures/Currency.js';
+	var buyeridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Buyer.js';
+	var supplieridOptionsApi = '/services/v4/js/agoreus-app/gen/api/Partners/Supplier.js';
 
 	$scope.invoicesidOptions = [];
 
 	$scope.currencycodeOptions = [];
+
+	$scope.buyeridOptions = [];
+
+	$scope.supplieridOptions = [];
 
 	$scope.dateOptions = {
 		startingDay: 1
@@ -83,6 +95,22 @@ angular.module('page')
 		});
 	}
 	currencycodeOptionsLoad();
+
+	function buyeridOptionsLoad() {
+		$http.get(buyeridOptionsApi)
+		.then(function(data) {
+			$scope.buyeridOptions = data.data;
+		});
+	}
+	buyeridOptionsLoad();
+
+	function supplieridOptionsLoad() {
+		$http.get(supplieridOptionsApi)
+		.then(function(data) {
+			$scope.supplieridOptions = data.data;
+		});
+	}
+	supplieridOptionsLoad();
 
 	$scope.dataPage = 1;
 	$scope.dataCount = 0;
@@ -201,10 +229,28 @@ angular.module('page')
 		}
 		return null;
 	};
+	$scope.buyeridOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.buyeridOptions.length; i ++) {
+			if ($scope.buyeridOptions[i].Id === optionKey) {
+				return $scope.buyeridOptions[i].Name;
+			}
+		}
+		return null;
+	};
+	$scope.supplieridOptionValue = function(optionKey) {
+		for (var i = 0 ; i < $scope.supplieridOptions.length; i ++) {
+			if ($scope.supplieridOptions[i].Id === optionKey) {
+				return $scope.supplieridOptions[i].Name;
+			}
+		}
+		return null;
+	};
 
 	$messageHub.onEntityRefresh($scope.loadPage($scope.dataPage));
 	$messageHub.onInvoicesModified(invoicesidOptionsLoad);
 	$messageHub.onCurrencyModified(currencycodeOptionsLoad);
+	$messageHub.onBuyerModified(buyeridOptionsLoad);
+	$messageHub.onSupplierModified(supplieridOptionsLoad);
 
 	function toggleEntityModal() {
 		$('#entityModal').modal('toggle');

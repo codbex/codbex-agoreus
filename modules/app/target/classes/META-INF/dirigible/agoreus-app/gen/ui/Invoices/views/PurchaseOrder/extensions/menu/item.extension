@@ -1,0 +1,5 @@
+{
+	"description": "PurchaseOrder menu",
+	"extensionPoint": "shell-agoreus-app-menu",
+	"module": "agoreus-app/gen/ui/Invoices/views/PurchaseOrder/extensions/menu/item.js"
+}

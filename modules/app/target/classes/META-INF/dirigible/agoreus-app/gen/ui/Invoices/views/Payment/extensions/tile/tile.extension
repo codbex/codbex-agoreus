@@ -1,5 +1,5 @@
 {
 	"description": "Invoices tiles",
-	"extensionPoint": "launchpad-Agoreus-tiles",
+	"extensionPoint": "launchpad-agoreus-tiles",
 	"module": "agoreus-app/gen/ui/Invoices/views/Payment/extensions/tile/tile.js"
 }

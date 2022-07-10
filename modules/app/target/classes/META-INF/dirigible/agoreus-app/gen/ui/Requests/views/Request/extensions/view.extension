@@ -1,5 +1,0 @@
-{
-	"description": "Request view",
-	"extensionPoint": "launchpad-Agoreus-Requests-view",
-	"module": "agoreus-app/gen/ui/Requests/views/Request/extensions/view.js"
-}

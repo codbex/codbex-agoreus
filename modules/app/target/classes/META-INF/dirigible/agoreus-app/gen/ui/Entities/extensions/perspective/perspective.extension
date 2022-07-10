@@ -1,5 +1,0 @@
-{
-	"description": "Entities perspective",
-	"extensionPoint": "launchpad-Agoreus-perspective",
-	"module": "agoreus-app/gen/ui/Entities/extensions/perspective/perspective.js"
-}

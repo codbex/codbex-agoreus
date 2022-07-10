@@ -27,6 +27,14 @@ var dao = daoApi.create({
 			name: "TraderId",
 			column: "PAYMENT_TRADERID",
 			type: "INTEGER",
+		}, {
+			name: "BuyerId",
+			column: "PAYMENT_BUYERID",
+			type: "INTEGER",
+		}, {
+			name: "SupplierId",
+			column: "PAYMENT_SUPPLIERID",
+			type: "INTEGER",
 		}]
 });
 

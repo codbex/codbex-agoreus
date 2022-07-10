@@ -1,0 +1,5 @@
+{
+	"description": "Partners tiles",
+	"extensionPoint": "launchpad-agoreus-tiles",
+	"module": "agoreus-app/gen/ui/Partners/views/Buyer/extensions/tile/tile.js"
+}
