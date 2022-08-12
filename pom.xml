@@ -251,7 +251,7 @@
         <logback.version>1.2.11</logback.version>
         <license-maven-plugin.version>4.2.rc2</license-maven-plugin.version>
         <commons.lang3>3.12.0</commons.lang3>
-        <jacoco.version>0.8.7</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
         <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
         <samtools.version>2.24.1</samtools.version>
         <junit.version>4.13.2</junit.version>
