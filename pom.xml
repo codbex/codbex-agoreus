@@ -239,7 +239,7 @@
     <properties>
         <project.title>codbex agoreus</project.title>
 
-        <dirigible.version>6.3.19</dirigible.version>
+        <dirigible.version>6.3.20</dirigible.version>
 
         <java.version>11</java.version>
 
