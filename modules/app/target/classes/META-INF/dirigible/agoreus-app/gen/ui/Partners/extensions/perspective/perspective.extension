@@ -1,5 +1,0 @@
-{
-	"description": "Partners perspective",
-	"extensionPoint": "launchpad-agoreus-perspective",
-	"module": "agoreus-app/gen/ui/Partners/extensions/perspective/perspective.js"
-}

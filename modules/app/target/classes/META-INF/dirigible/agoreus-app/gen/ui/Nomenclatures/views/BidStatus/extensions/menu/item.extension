@@ -1,5 +1,0 @@
-{
-	"description": "BidStatus menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/BidStatus/extensions/menu/item.js"
-}

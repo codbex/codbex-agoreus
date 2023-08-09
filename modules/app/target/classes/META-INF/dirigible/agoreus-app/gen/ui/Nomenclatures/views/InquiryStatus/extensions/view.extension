@@ -1,5 +1,0 @@
-{
-	"description": "InquiryStatus view",
-	"extensionPoint": "launchpad-agoreus-Nomenclatures-view",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/InquiryStatus/extensions/view.js"
-}

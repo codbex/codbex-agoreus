@@ -13,6 +13,3 @@ Spot Trading Application
 ## Management
 
 ![model](images/agoreus-management.png)
-
-
-

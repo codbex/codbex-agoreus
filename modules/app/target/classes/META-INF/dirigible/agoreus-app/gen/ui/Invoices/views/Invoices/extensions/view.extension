@@ -1,5 +1,0 @@
-{
-	"description": "Invoices view",
-	"extensionPoint": "launchpad-agoreus-Invoices-view",
-	"module": "agoreus-app/gen/ui/Invoices/views/Invoices/extensions/view.js"
-}

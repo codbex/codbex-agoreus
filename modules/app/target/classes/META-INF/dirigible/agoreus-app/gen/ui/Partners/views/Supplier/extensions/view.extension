@@ -1,5 +1,0 @@
-{
-	"description": "Supplier view",
-	"extensionPoint": "launchpad-agoreus-Partners-view",
-	"module": "agoreus-app/gen/ui/Partners/views/Supplier/extensions/view.js"
-}

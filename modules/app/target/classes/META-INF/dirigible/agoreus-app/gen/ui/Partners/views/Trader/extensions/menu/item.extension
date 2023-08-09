@@ -1,5 +1,0 @@
-{
-	"description": "Trader menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Partners/views/Trader/extensions/menu/item.js"
-}

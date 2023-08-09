@@ -1,5 +1,0 @@
-{
-	"description": "QuotationStatus menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/QuotationStatus/extensions/menu/item.js"
-}

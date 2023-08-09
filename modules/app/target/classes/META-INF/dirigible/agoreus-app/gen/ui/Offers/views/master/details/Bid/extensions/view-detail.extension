@@ -1,5 +1,0 @@
-{
-	"description": "Bid view",
-	"extensionPoint": "launchpad-agoreus-Offers-Offer-view",
-	"module": "agoreus-app/gen/ui/Offers/views/master/details/Bid/extensions/view.js"
-}

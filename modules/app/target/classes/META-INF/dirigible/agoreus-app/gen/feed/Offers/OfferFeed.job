@@ -1,5 +1,0 @@
-{
-	"expression": "0 0 0 1 * ? *",
-	"handler": "agoreus-app/gen/feed/Offers/OfferFeedSynchronizer.js",
-	"description": "OfferFeedSynchronizer Job"
-}

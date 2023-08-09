@@ -1,5 +1,0 @@
-{
-	"description": "Inquiries view",
-	"extensionPoint": "launchpad-agoreus-Inquiries-Inquiry-view",
-	"module": "agoreus-app/gen/ui/Inquiries/views/master/Inquiry/master/extensions/view.js"
-}

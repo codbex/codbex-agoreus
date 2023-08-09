@@ -1,5 +1,0 @@
-{
-	"description": "QuotationStatus view",
-	"extensionPoint": "launchpad-agoreus-Nomenclatures-view",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/QuotationStatus/extensions/view.js"
-}

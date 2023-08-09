@@ -1,5 +1,0 @@
-{
-	"description": "Payment menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Invoices/views/Payment/extensions/menu/item.js"
-}

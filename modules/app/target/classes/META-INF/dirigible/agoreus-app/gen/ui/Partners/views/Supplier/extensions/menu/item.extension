@@ -1,5 +1,0 @@
-{
-	"description": "Supplier menu",
-	"extensionPoint": "shell-agoreus-app-menu",
-	"module": "agoreus-app/gen/ui/Partners/views/Supplier/extensions/menu/item.js"
-}

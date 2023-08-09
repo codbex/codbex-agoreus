@@ -1,5 +1,0 @@
-{
-	"description": "Invoices perspective",
-	"extensionPoint": "launchpad-agoreus-perspective",
-	"module": "agoreus-app/gen/ui/Invoices/extensions/perspective/perspective.js"
-}

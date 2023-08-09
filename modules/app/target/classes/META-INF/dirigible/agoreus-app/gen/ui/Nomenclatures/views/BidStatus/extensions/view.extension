@@ -1,5 +1,0 @@
-{
-	"description": "BidStatus view",
-	"extensionPoint": "launchpad-agoreus-Nomenclatures-view",
-	"module": "agoreus-app/gen/ui/Nomenclatures/views/BidStatus/extensions/view.js"
-}
