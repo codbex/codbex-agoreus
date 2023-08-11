@@ -1,1 +1,26 @@
+# folders
+dist/
+.settings/
+.idea/
+.run/
+target/
+dirigible_local/
+bin/
+.history/
+.vscode/
+
+.editorconfig
+.gitattributes
+files
 .DS_Store
+.project
+.classpath
+*.bak
+*.class
+*.jar
+derby.log
+*.versionsBackup
+*.fpr
+*.iml
+*._trace
+*.log
