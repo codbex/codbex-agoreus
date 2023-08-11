@@ -1,0 +1,13 @@
+name: Pull Request - Application
+
+on:
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  main:
+    uses: codbex/codbex-infra/.github/workflows/application-pull-request.yaml@main
+    with:
+      application-name: codbex-aion
+    secrets: inherit
