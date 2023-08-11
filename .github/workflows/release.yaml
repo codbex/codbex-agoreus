@@ -17,7 +17,7 @@ jobs:
       application-name: codbex-agoreus
       release-version: ${{ inputs.release-version }}
       release-content: |
-        ## codbex-agoreus - ${{ github.event.inputs.release-version }}
+        ## codbex-agoreus - ${{ inputs.release-version }}
   
         Spot Trading Application
   
