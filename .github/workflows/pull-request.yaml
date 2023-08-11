@@ -9,5 +9,5 @@ jobs:
   main:
     uses: codbex/codbex-infra/.github/workflows/application-pull-request.yaml@main
     with:
-      application-name: codbex-aion
+      application-name: codbex-agoreus
     secrets: inherit
