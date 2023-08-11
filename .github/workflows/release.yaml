@@ -1,0 +1,35 @@
+name: Release - Application
+
+on:
+  workflow_dispatch:
+    inputs:
+      release-version:
+        description: Release Version
+        required: true
+        default: 1.0.0
+
+run-name: 'version set to ${{ inputs.release-version }} for release'
+
+jobs:
+  main:
+    uses: codbex/codbex-infra/.github/workflows/application-release.yaml@main
+    with:
+      application-name: codbex-agoreus
+      release-version: ${{ inputs.release-version }}
+      release-content: |
+        ## codbex-agoreus - ${{ github.event.inputs.releaseVersion }}
+  
+        Spot Trading Application
+  
+        ## Deployment
+  
+        ```
+        docker run --name codbex-agoreus \
+        --rm -p 8080:8080 -p 8081:8081 \
+        ghcr.io/codbex/codbex-agoreus:${{ inputs.release-version }}
+        ```
+  
+        ## Access points:
+  
+        - [/services/web/codbex-agoreus/gen/](http://localhost:8080/services/web/codbex-agoreus/gen/) - Admin Panel
+    secrets: inherit
