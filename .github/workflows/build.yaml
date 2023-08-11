@@ -1,0 +1,13 @@
+name: Build - Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    uses: codbex/codbex-infra/.github/workflows/application-build.yaml@main
+    with:
+      application-name: codbex-agoreus
+    secrets: inherit
