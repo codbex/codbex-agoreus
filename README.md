@@ -8,8 +8,37 @@ Spot Trading Application
 
 ## Application
 
-![model](images/agoreus-launchpad.jpg)
+### Launchpad
 
-## Management
+![model](images/agoreus-launchpad.png)
 
-![model](images/agoreus-management.png)
+### Management
+
+#### Inquiry
+
+![model](images/agoreus-inquiry.png)
+
+#### Quotation
+
+![model](images/agoreus-quotation.png)
+
+#### Offer
+
+![model](images/agoreus-offer.png)
+
+#### Bid
+
+![model](images/agoreus-bid.png)
+
+#### Invoice
+
+![model](images/agoreus-invoice.png)
+
+#### Order
+
+![model](images/agoreus-order.png)
+
+#### Payment
+
+![model](images/agoreus-payment.png)
+
