@@ -16,7 +16,7 @@ Spot Trading Application
 
 #### Inquiry
 
-![model](images/agoreus-inquiry.png)
+![model](images/agoreus-inguiry.png)
 
 #### Quotation
 
