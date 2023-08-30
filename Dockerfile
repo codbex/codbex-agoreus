@@ -1,7 +1,7 @@
 # Docker descriptor for codbex-agoreus
 # License - http://www.eclipse.org/legal/epl-v20.html
 
-FROM ghcr.io/codbex/codbex-gaia:0.8.0
+FROM ghcr.io/codbex/codbex-gaia:0.9.0
 
 COPY codbex-agoreus target/dirigible/repository/root/registry/public/codbex-agoreus
 
