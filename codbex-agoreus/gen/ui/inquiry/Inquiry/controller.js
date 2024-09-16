@@ -181,7 +181,7 @@ angular.module('page', ["ideUI", "ideView", "entityApi"])
 			$scope.optionsCountry = response.data.map(e => {
 				return {
 					value: e.Id,
-					text: e.Country
+					text: e.Name
 				}
 			});
 		});
