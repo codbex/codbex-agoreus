@@ -874,7 +874,7 @@
                         "isCalculatedProperty": "false",
                         "name": "Country",
                         "widgetDropDownKey": "Id",
-                        "widgetDropDownValue": "Country",
+                        "widgetDropDownValue": "Name",
                         "widgetIsMajor": "true",
                         "widgetLength": "20",
                         "widgetType": "DROPDOWN",

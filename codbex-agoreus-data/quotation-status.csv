@@ -1,0 +1,5 @@
+QUOTATIONSTATUS_ID,QUOTATIONSTATUS_NAME
+1,Initial
+2,Open
+3,Finished
+4,Cancelled
