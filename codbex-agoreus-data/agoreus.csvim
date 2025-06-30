@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "table": "CODBEX_QUOTATIONSTATUS",
+      "schema": "PUBLIC",
+      "file": "/codbex-agoreus-data/quotation-status.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0"
+    },
+    {
+      "table": "CODBEX_OFFERSTATUS",
+      "schema": "PUBLIC",
+      "file": "/codbex-agoreus-data/offer-status.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0"
+    },
+    {
+      "table": "CODBEX_BIDSTATUS",
+      "schema": "PUBLIC",
+      "file": "/codbex-agoreus-data/bid-status.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0"
+    },
+    {
+      "table": "CODBEX_INQUIRYSTATUS",
+      "schema": "PUBLIC",
+      "file": "/codbex-agoreus-data/inquiry-status.csv",
+      "header": true,
+      "useHeaderNames": true,
+      "delimField": ",",
+      "delimEnclosing": "\"",
+      "distinguishEmptyFromNull": true,
+      "version": "1.0"
+    }
+  ]
+}
